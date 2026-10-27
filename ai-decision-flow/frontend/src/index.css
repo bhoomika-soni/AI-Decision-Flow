@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  background: #334155;
+  color: white;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.topbar {
+  min-height: 90px;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid #334155;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.topbar p {
+  margin: 6px 0 0;
+  color: #94a3b8;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+}
+
+.run-button {
+  background: #6366f1;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  min-height: calc(100vh - 90px);
+}
+
+.canvas-section {
+  min-width: 0;
+  padding: 20px;
+}
+
+.canvas-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.canvas-heading h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.canvas-heading span {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.flow-canvas {
+  height: 620px;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111c31;
+}
+
+.node-editor {
+  padding: 24px 18px;
+  border-left: 1px solid #334155;
+  background: #172033;
+}
+
+.node-editor h3 {
+  margin-top: 0;
+}
+
+.node-editor label {
+  display: block;
+  margin: 22px 0 8px;
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+.node-editor input,
+.node-editor textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: #0f172a;
+  color: white;
+}
+
+.node-editor textarea {
+  resize: vertical;
+}
+
+.node-editor p {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.delete-button {
+  margin-top: 24px;
+  background: #991b1b;
+}
+
+.result-panel {
+  padding: 20px 24px;
+  border-top: 1px solid #334155;
+}
+
+.error-message {
+  color: #fca5a5;
+}
+
+.react-flow__background {
+  background: #111c31;
+}
+
+@media (max-width: 800px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .node-editor {
+    border-left: 0;
+    border-top: 1px solid #334155;
+  }
+
+  .flow-canvas {
+    height: 500px;
+  }
+}
