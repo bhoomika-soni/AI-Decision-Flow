@@ -63,7 +63,7 @@ Before running the project, ensure you have:
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/bhoomika-soni/AI-Decision-Flow.git
 cd AI-Decision-Flow
 ```
 
